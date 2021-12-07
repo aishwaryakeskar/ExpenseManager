@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#defabb"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context="com.example.android.expense.RecordActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Item name:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/itemnameET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter name"
+            android:textSize="22dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:paddingBottom="8dp"
+            android:text="Category:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24dp" />
+
+        <Spinner
+            android:id="@+id/categorySP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/category" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Mode of Pay:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24dp" />
+
+        <Spinner
+            android:id="@+id/modeSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/mode" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Amount:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/amountET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:textSize="22dp" />
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="addRecord"
+        android:text="add"
+        android:textColor="#ffffff" />
+</LinearLayout>
